@@ -12,6 +12,7 @@ nav{
     background-color: lightyellow;
     text-align: center;
     font-size: 25px;
+    margin-bottom: 50px;
 }
 nav a{
     padding:15px 20px;
@@ -33,6 +34,6 @@ nav a:hover{
     flex-direction: row; 
     width: 70%;
     justify-content: center;
-    /* gap: 20px; */
+    gap: 50px;
     margin-bottom: 40px;
 }
