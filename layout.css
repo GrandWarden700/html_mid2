@@ -1,7 +1,15 @@
 *{
     box-sizing: border-box;
 }
-
+body{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+.empty_space {
+    height: 100px; 
+    background-color: transparent; 
+}
 .top_corner {
     border-radius: 20px 20px 0px 0px;
 }
@@ -16,6 +24,10 @@ header{
     text-align: center;
     margin:0px;
     padding:20px;
+}
+.bg_img{
+    background-image: url(image/bg_img/1.png);
+    border-radius: 20px 20px 20px 20px;
 }
 nav{
     background-color: lightyellow;
@@ -41,21 +53,31 @@ nav a:hover{
     display: flex;
     margin: 0 auto;  
     flex-direction: row; 
-    width: 70%;
+    flex: 1;
+    width: 65%;
     justify-content: center;
     gap: 50px;
     margin-bottom: 40px;
 }
+aside{
+    width: 100px; 
+    padding: 10px;
+    background-color: #CEFFCE;
+    position: sticky;
+    top: 0%; /* 從視窗頂部計算的位置 */
+    transform: translateY(-50%); /* 使其在垂直方向居中 */
+}
 footer{
    background-color: #FF7575; 
    display: flex;
-   flex-direction: row; /* 排列方式 垂直/水平 */
-   align-items: center; /* 水平置中 */
-   justify-content: center; /* 垂直置中 */
-   height: 150px; /*  footer高度 */
+   flex-direction: row; 
+   align-items: center; 
+   justify-content: center; 
+   height: 150px; 
 }
 .icon_layout{
     display: flex;
+    flex-direction: column; 
     gap: 25px;
     margin: 10px;
 }
