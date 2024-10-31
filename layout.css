@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background-color: lightgreen;
+    color:white;
+    text-align: center;
+    margin:0px;
+    padding:20px;
+}
+nav{
+    background-color: lightyellow;
+    text-align: center;
+    font-size: 25px;
+}
+nav a{
+    padding:15px 20px;
+    display:inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #A6A600;
+    color:white;
+}
+
+.img_font1{
+    max-width: 400px;
+    max-height: 400px;
+}
+.project_div{
+    display: flex;
+    margin: 0 auto;  
+    flex-direction: row; 
+    width: 70%;
+    justify-content: center;
+    /* gap: 20px; */
+    margin-bottom: 40px;
+}

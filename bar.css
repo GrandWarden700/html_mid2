@@ -1,0 +1,107 @@
+.bar_bg {
+    margin: 0;
+    padding: 0;
+    background-color: darkgray;
+}
+    
+
+.skill-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    gap: 10px;
+}
+
+/* 設定進度條容器 */
+.skill-line {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* 進度百分比文字 */
+.skill-line span {
+    position: absolute;
+    right: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* 80% 進度條動畫效果 */
+.line-80::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #ff6b6b;
+    border-radius: 10px;
+    animation: progressAnimation80 2s ease forwards;
+}
+
+/* 65% 進度條動畫效果 */
+.line-65::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    animation: progressAnimation65 3s ease forwards;
+}
+
+/* 60% 進度條動畫效果 */
+.line-60::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #9F35FF;
+    border-radius: 10px;
+    animation: progressAnimation60 4s ease forwards;
+}
+
+/* 75% 進度條動畫效果 */
+.line-75::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #FF5809;
+    border-radius: 10px;
+    animation: progressAnimation75 5s ease forwards;
+}
+
+/* HTML */  /* CSS */
+@keyframes progressAnimation80 {
+    0% { width: 0%; }
+    100% { width: 80%; }
+}
+
+/* Java*/
+@keyframes progressAnimation65 {
+    0% { width: 0%; }
+    100% { width: 65%; }
+}
+
+/* JSP */
+@keyframes progressAnimation60 {
+    0% { width: 0%; }
+    100% { width: 60%; }
+}
+
+/* Kotlin */
+@keyframes progressAnimation75 {
+    0% { width: 0%; }
+    100% { width: 75%; }
+}
