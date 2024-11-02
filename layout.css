@@ -1,16 +1,26 @@
 *{
     box-sizing: border-box;
 }
+.zen-old-mincho-regular {
+    font-family: "Zen Old Mincho", "Microsoft JhengHei";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .rocknroll-one-regular {
+    font-family: "RocknRoll One", "Microsoft JhengHei";
+    font-weight: 400;
+    font-style: normal;
+  }
 body{
     display: flex;
     justify-content: flex-start; 
     align-items: flex-start; 
 }
-.empty_space {
+.empty_space100 {
     height: 100px; 
     background-color: transparent; 
 }
-.empty_space1 {
+.empty_space30 {
     height: 30px; 
     background-color: transparent; 
 }
@@ -53,6 +63,11 @@ nav a:hover{
     max-width: 250px;
     max-height: 250px;
 }
+.circle-image {
+    border-radius: 50%; /* 讓圖片成為圓形 */
+    border: 5px solid #333; /* 設定外框顏色和粗細 */
+    object-fit: cover; /* 確保圖片被裁切而不會變形 */
+  }
 .project_div{
     display: flex;
     margin: 0 auto;  
