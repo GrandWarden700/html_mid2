@@ -43,7 +43,7 @@
     height: 100%;
     background-color: #ff6b6b;
     border-radius: 10px;
-    animation: progressAnimation80 2s ease forwards;
+    animation: progressAnimation80 8s ease forwards;
 }
 
 /* 65% 進度條動畫效果 */
@@ -55,7 +55,7 @@
     height: 100%;
     background-color: #4caf50;
     border-radius: 10px;
-    animation: progressAnimation65 3s ease forwards;
+    animation: progressAnimation65 9s ease forwards;
 }
 
 /* 60% 進度條動畫效果 */
@@ -67,7 +67,7 @@
     height: 100%;
     background-color: #9F35FF;
     border-radius: 10px;
-    animation: progressAnimation60 4s ease forwards;
+    animation: progressAnimation60 10s ease forwards;
 }
 
 /* 75% 進度條動畫效果 */
@@ -79,7 +79,7 @@
     height: 100%;
     background-color: #FF5809;
     border-radius: 10px;
-    animation: progressAnimation75 5s ease forwards;
+    animation: progressAnimation75 11s ease forwards;
 }
 
 /* HTML */  /* CSS */
