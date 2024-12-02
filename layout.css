@@ -41,7 +41,8 @@ header{
 }
 .bg_img{
     background-image: url(image/bg_img/1.png);
-    border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 nav{
     background-color: lightyellow;
