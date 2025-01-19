@@ -190,7 +190,7 @@ footer{
             margin-top: 2%;
             margin-left: 4%;
             margin-right: 4%;
-            width: 100%; /* 填滿整行 */
+            width: 85%; /* 填滿整行 */
             gap: 0;
         }
 
@@ -208,7 +208,7 @@ footer{
             border-radius: 4%;
             margin-left: 4%;
             margin-right: 4%;
-            width: 100%; /* 填滿整行 */
+            width: 80%; /* 填滿整行 */
             gap: 0;
         }
     
