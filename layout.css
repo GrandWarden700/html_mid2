@@ -208,7 +208,9 @@ footer{
             border-radius: 4%;
             margin-left: 4%;
             margin-right: 4%;
-            width: 80%; /* 填滿整行 */
+            margin-bottom: 4%;
+            width: 88%; /* 填滿整行 */
+            padding:2%;
             gap: 0;
         }
     
@@ -218,6 +220,7 @@ footer{
             justify-content: initial;
             height: 30%;
             background-color: #FF7575;
+            padding:2%;
         }
     
         .icon_layout {
