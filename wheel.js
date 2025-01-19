@@ -148,7 +148,7 @@ class Wheel {
                 resultElement.innerHTML = `
                     <div class="result-content">
                         <h2>恭喜各位委員！</h2>
-                        <p>今天中午吃<span style="font-weight: bold; font-size: 1.2em">${selectedItem.text}</span>！</p>
+                        <p>今天中午吃  <span style="font-weight: bold; font-size: 1.2em">${selectedItem.text}</span>！</p>
                         <p style="margin-top: 10px; color: #666; font-size: 0.8em">
                             
                         </p>

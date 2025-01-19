@@ -99,6 +99,7 @@ footer{
    flex-direction: row; 
    align-items: center; 
    justify-content: center; 
+   margin-top: 0; /* 移除上方外邊距 */
    height: 150px; 
 }
 .icon_layout{
