@@ -162,8 +162,14 @@ footer{
         nav {
             background-color: lightyellow;
             text-align: center;
-            font-size: 25px;
+            font-size: 20px;
             margin-bottom: 0; /* 調整間距 */
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0; /* 移除多餘外邊距 */
+            padding: 3%; /* 移除多餘內邊距 */
         }
     
         .img_font1 {
@@ -181,6 +187,7 @@ footer{
             display: block;
             background: #FFFF6F;
             border-radius: 4%;
+            margin-top: 2%;
             margin-left: 4%;
             margin-right: 4%;
             width: 100%; /* 填滿整行 */
@@ -196,7 +203,13 @@ footer{
         }
 
         .contact_phone{
+            display: block;
             background-color: #CEFFCE;
+            border-radius: 4%;
+            margin-left: 4%;
+            margin-right: 4%;
+            width: 100%; /* 填滿整行 */
+            gap: 0;
         }
     
         footer {
