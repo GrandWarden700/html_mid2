@@ -87,7 +87,7 @@ class Wheel {
     }
 
     createSegmentPath(startAngle, endAngle) {
-        const radius = 50;  // 文字距離中心的距離
+        const radius = 50;  // 文字距離中心的距離，越大越近
         const startRad = (startAngle - 90) * (Math.PI / 180);
         const endRad = (endAngle - 90) * (Math.PI / 180);
 
@@ -159,7 +159,7 @@ class Wheel {
             <div class="result-content">
                 <h2>恭喜各位委員！</h2>
                 <p>今天中午吃 <span style="font-weight: bold; font-size: 1.2em">${text}</span>！</p>
-                <button onclick="document.body.removeChild(this.closest('.result-popup'))" 
+                <button onclick="location.reload()" 
                         style="padding: 10px 20px; font-size: 16px;">換吃其他的！</button>
             </div>
         `;
