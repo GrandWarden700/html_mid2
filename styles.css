@@ -160,7 +160,7 @@ h1 {
     border-radius: 0.5rem;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: min(400px, 95vw);  /* 響應式寬度 */
+    width: min(400px, 85vw);  /* 響應式寬度 */
     max-height: min(90vh, 300px); /* 響應式高度 */
     display: flex;           /* 使用 flex 布局 */
     flex-direction: column;  /* 垂直排列 */
