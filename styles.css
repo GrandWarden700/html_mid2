@@ -16,6 +16,9 @@ body {
 }
 
 .container {
+    background: #FFFF6F;
+    border: 2px solid black; /* 設定外框顏色和粗細 */
+    border-radius: 4%;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -167,6 +170,9 @@ h1 {
 /* 媒體查詢，用於更具體的調整 */
 @media (max-width: 480px) {
     .container {
+        background: #FFFF6F;
+        border: 2px solid black; /* 設定外框顏色和粗細 */
+        border-radius: 4%;
         padding: 5px;
     }
     
@@ -175,7 +181,7 @@ h1 {
     }
     
     .spin-button {
-        margin-top: 1rem;
+        margin-top: 0rem;
     }
 }
 
