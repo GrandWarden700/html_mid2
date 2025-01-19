@@ -70,14 +70,17 @@ nav a:hover{
     object-fit: cover; /* 確保圖片被裁切而不會變形 */
   }
 .project_div{
+    background: #FFFF6F;
+    border-radius: 4%;
     display: flex;
     margin: 0 auto;  
+    padding: 2%;
     flex-direction: row; 
     flex: 1;
-    width: 65%;
+    width: 75%;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 40px;
+    gap: 3%;
+    margin-bottom: 4%;
 }
 aside{
     width: 130px; 
