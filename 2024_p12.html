@@ -5,20 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>【12強超熱血精華】台灣經歷多少心碎與不甘 才換來這難得的冠軍 5分鐘回顧這趟旅程🔥</title>
   <style>
+    /* 預設夜間模式 */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
     .video-container {
       width: 90%;
-      max-width:1000px;
+      max-width: 1000px;
       aspect-ratio: 16 / 9;
+      position: relative;
     }
     video {
       width: 100%;
@@ -27,19 +30,139 @@
       border-radius: 10px;
       background-color: #000;
     }
+
+     /* 控制區塊樣式 */
+     .controls {
+      display: flex;
+      flex-wrap: wrap; /* 讓按鈕在小螢幕換行 */
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 10px;
+      gap: 8px; /* 讓按鈕之間有間距 */
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #444;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #666;
+    }
+
+    /* 夜間模式按鈕 */
+    .theme-toggle {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #444;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+    .theme-toggle:hover {
+      background-color: #666;
+    }
+
+    /* 亮色模式 */
+    body.light-mode {
+      background-color: #fff;
+      color: #000;
+    }
+    body.light-mode video {
+      border: 2px solid #000;
+      background-color: #fff;
+    }
+    body.light-mode .theme-toggle {
+      background-color: #ddd;
+      color: #000;
+    }
+    body.light-mode .theme-toggle:hover {
+      background-color: #bbb;
+    }
   </style>
 </head>
 <body>
   <div class="video-container">
-    <video controls fullscreen>
-        <source src="video/【12強超熱血精華】台灣經歷多少心碎與不甘_才換來這難得的冠軍_5分鐘回顧這趟旅程🔥.mp4" type="video/mp4">
+    <video controls>
+      <source src="video/【12強超熱血精華】台灣經歷多少心碎與不甘_才換來這難得的冠軍_5分鐘回顧這趟旅程🔥.mp4" type="video/mp4">
+      <track src=" " kind="subtitles" srclang="zh" label="中文 (繁體)" default>   <!-- 字幕檔放這邊 -->
       您的瀏覽器不支援影片播放，請嘗試使用其他瀏覽器。
     </video>
   </div>
+  <div class="controls">
+    <button id="rewindBtn">⏪ 倒退 10 秒</button>
+    <div class="progress-bar" id="progressBar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <button id="forwardBtn">⏩ 快轉 10 秒</button>
+    <select id="speedSelector" class="speed-selector">
+      <option value="0.5">0.5x</option>
+      <option value="1" selected>1x</option>
+      <option value="1.5">1.5x</option>
+      <option value="2">2x</option>
+    </select>
+  </div>
+
+  <!-- 夜間模式切換按鈕 -->
+  <button id="themeToggle" class="theme-toggle">切換背景模式</button>
 
   <script>
-    // 讓影片播放器支援全螢幕功能
+    const themeToggle = document.getElementById("themeToggle");
     const video = document.querySelector("video");
+
+    //播放、暫停影片
+    function togglePlayPause() {
+            var video = document.getElementById("myVideo");
+            if (video.paused) {
+                video.play();  // 播放影片
+            } else {
+                video.pause(); // 暫停影片
+            }
+        }
+      
+    // 讀取使用者偏好的模式
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+      themeToggle.textContent = "🌙 夜間模式";
+    }
+
+     // 快進 / 倒退 10 秒
+     forwardBtn.addEventListener("click", () => video.currentTime += 10);
+    rewindBtn.addEventListener("click", () => video.currentTime -= 10);
+
+    // 快捷鍵支援
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "ArrowRight") video.currentTime += 10;
+      if (event.code === "ArrowLeft") video.currentTime -= 10;
+    });
+
+    // 影片速度調整
+    speedSelector.addEventListener("change", () => {
+      video.playbackRate = speedSelector.value;
+    });
+    
+    // 切換夜間模式 / 亮色模式
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        themeToggle.textContent = "🌙 夜間模式";
+      } else {
+        localStorage.setItem("theme", "dark");
+        themeToggle.textContent = "☀️ 亮色模式";
+      }
+    });
+
+    // 讓影片播放器支援連點兩下全螢幕
     video.addEventListener("dblclick", () => {
       if (document.fullscreenElement) {
         document.exitFullscreen();
