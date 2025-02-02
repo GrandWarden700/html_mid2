@@ -99,17 +99,18 @@
     </video>
   </div>
   <div class="controls">
-    <button id="rewindBtn">⏪ 倒退 10 秒</button>
+    <button id="rewindBtn">⏪ 倒退 5 秒</button>
     <div class="progress-bar" id="progressBar">
       <div class="progress" id="progress"></div>
     </div>
-    <button id="forwardBtn">⏩ 快轉 10 秒</button>
+    <button id="forwardBtn">⏩ 快轉 5 秒</button>
+    <div>播放速度：
     <select id="speedSelector" class="speed-selector">
       <option value="0.5">0.5x</option>
       <option value="1" selected>1x</option>
       <option value="1.5">1.5x</option>
       <option value="2">2x</option>
-    </select>
+    </select></div>
   </div>
 
   <!-- 夜間模式切換按鈕 -->
@@ -135,9 +136,9 @@
       themeToggle.textContent = "🌙 夜間模式";
     }
 
-     // 快進 / 倒退 10 秒
-     forwardBtn.addEventListener("click", () => video.currentTime += 10);
-    rewindBtn.addEventListener("click", () => video.currentTime -= 10);
+     // 快轉 / 倒退 5 秒
+     forwardBtn.addEventListener("click", () => video.currentTime += 5);
+    rewindBtn.addEventListener("click", () => video.currentTime -= 5);
 
     // 快捷鍵支援
     document.addEventListener("keydown", (event) => {
